@@ -18,17 +18,17 @@ public class PantsManager : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         kakudo += 1;
-        pantsSprite.transform.Rotate(0, 0, 50);
+        pantsSprite.transform.Rotate(0, 0, 35);
         //スペースボタンが入力されたとき
         if (Input.GetButton("Jump"))
         {
-            pantsBody.AddForce(transform.up, ForceMode2D.Impulse);
-            if (pantsBody.velocity.x <= 30)
+            pantsBody.AddForce(transform.up*1.5f, ForceMode2D.Impulse);
+            if (pantsBody.velocity.x <= 45)
             {
                 pantsBody.AddForce(transform.right, ForceMode2D.Impulse);
             }
         }
-        if(pantsBody.velocity.x<=30)
+        if(pantsBody.velocity.x<=45)
         {
             pantsBody.AddForce(transform.right, ForceMode2D.Impulse);
         }

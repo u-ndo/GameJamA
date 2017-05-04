@@ -12,6 +12,7 @@ public class PantsManager : MonoBehaviour {
     public float MaxSpeed;
     public float FirstSpeed;
     public float Curving;
+    public float Rotate;
 
     // Use this for initialization
     void Start () {

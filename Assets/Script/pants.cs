@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class pants : MonoBehaviour {
 
@@ -22,7 +23,7 @@ public class pants : MonoBehaviour {
         if(trigger.tag=="Yuka")
         {
             //げーむおーばーしょり
-
+            SceneManager.LoadScene("GameOver");
         }
     }
 }

@@ -8,7 +8,7 @@ public class CameraManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+        pants = GameObject.FindWithTag("Pants");
 	}
 	
 	// Update is called once per frame

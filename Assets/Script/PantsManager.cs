@@ -7,7 +7,11 @@ public class PantsManager : MonoBehaviour {
 
     public Rigidbody2D pantsBody;
     public GameObject pantsSprite;
-    public float kakudo=0;
+    float kakudo=0;
+
+    public float MaxSpeed;
+    public float FirstSpeed;
+    public float Curving;
 
     // Use this for initialization
     void Start () {

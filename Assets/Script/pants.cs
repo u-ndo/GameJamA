@@ -15,6 +15,14 @@ public class pants : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         pantsBody.AddForce(transform.right, ForceMode2D.Impulse);
-
 	}
+
+    void OnTriggerEnter2D(Collider2D trigger)
+    {
+        if(trigger.tag=="Yuka")
+        {
+            //げーむおーばーしょり
+
+        }
+    }
 }

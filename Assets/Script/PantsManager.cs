@@ -41,10 +41,11 @@ public class PantsManager : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D trigger)
     {
-        if(trigger.tag=="Yuka")
+        if (trigger.tag == "Yuka")
         {
             //げーむおーばーしょり
             SceneManager.LoadScene("GameOver");
         }
+        
     }
 }

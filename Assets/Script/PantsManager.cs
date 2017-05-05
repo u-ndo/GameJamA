@@ -7,33 +7,35 @@ public class PantsManager : MonoBehaviour {
 
     public Rigidbody2D pantsBody;
     public GameObject pantsSprite;
-    float kakudo=0;
 
-    public float MaxSpeed;
-    public float FirstSpeed;
-    public float Curving;
-    public float Rotate;
+    //パンツごとの性格付け用の数値
+    public float MaxSpeed;      //最高速
+    public float FirstSpeed;    //初速(Y方向)
+    public float Curving;       //浮上力
+    public float Rotate;        //回転する速度
 
     // Use this for initialization
     void Start () {
 		pantsBody =GetComponent<Rigidbody2D>();
-        pantsBody.AddForce(transform.up*20, ForceMode2D.Impulse);
+        //初速付与
+        pantsBody.AddForce(transform.up*FirstSpeed, ForceMode2D.Impulse);
     }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        kakudo += 1;
-        pantsSprite.transform.Rotate(0, 0, 35);
+        //回転します
+        pantsSprite.transform.Rotate(0, 0,Rotate);
         //スペースボタンが入力されたとき
         if (Input.GetButton("Jump"))
         {
-            pantsBody.AddForce(transform.up*1.5f, ForceMode2D.Impulse);
-            if (pantsBody.velocity.x <= 45)
+            //浮上処理
+            pantsBody.AddForce(transform.up*Curving, ForceMode2D.Impulse);
+            if (pantsBody.velocity.x <= MaxSpeed)
             {
                 pantsBody.AddForce(transform.right, ForceMode2D.Impulse);
             }
         }
-        if(pantsBody.velocity.x<=45)
+        if(pantsBody.velocity.x<= MaxSpeed)
         {
             pantsBody.AddForce(transform.right, ForceMode2D.Impulse);
         }
@@ -46,6 +48,13 @@ public class PantsManager : MonoBehaviour {
             //げーむおーばーしょり
             SceneManager.LoadScene("GameOver");
         }
+<<<<<<< HEAD
         
+=======
+        if(trigger.tag=="Mado")//仮置き
+        {
+            //ゲームクリア処理
+        }
+>>>>>>> 796e3478fed6795d25f35a79d1220810c92ca461
     }
 }

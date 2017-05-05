@@ -48,13 +48,10 @@ public class PantsManager : MonoBehaviour {
             //げーむおーばーしょり
             SceneManager.LoadScene("GameOver");
         }
-<<<<<<< HEAD
-        
-=======
-        if(trigger.tag=="Mado")//仮置き
+        if(trigger.tag=="Goal")
         {
             //ゲームクリア処理
+            SceneManager.LoadScene("GameClear");
         }
->>>>>>> 796e3478fed6795d25f35a79d1220810c92ca461
     }
 }

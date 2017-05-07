@@ -8,4 +8,11 @@ public class start : MonoBehaviour {
     {
         SceneManager.LoadScene("select");
     }
+    void FixedUpdate()
+    {
+        if (Input.GetButton("Jump"))
+        {
+            Selectstart();
+        }
+    }
 }

@@ -90,5 +90,9 @@ public class SelectManager : MonoBehaviour {
         {
             SelectStart();
         }
+        if (Input.GetButton("Cancel"))
+        {
+            Application.Quit();
+        }
     }
 }

@@ -14,5 +14,9 @@ public class start : MonoBehaviour {
         {
             Selectstart();
         }
+        if (Input.GetButton("Cancel"))
+        {
+            Application.Quit();
+        }
     }
 }

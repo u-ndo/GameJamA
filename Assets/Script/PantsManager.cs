@@ -39,7 +39,11 @@ public class PantsManager : MonoBehaviour {
         {
             pantsBody.AddForce(transform.right, ForceMode2D.Impulse);
         }
-	}
+        if (Input.GetButton("Cancel"))
+        {
+            Application.Quit();
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D trigger)
     {

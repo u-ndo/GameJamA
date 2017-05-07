@@ -9,4 +9,16 @@ public class Onemore : MonoBehaviour {
     {
         SceneManager.LoadScene("main");
     }
+    void FixedUpdate()
+    {
+        if (Input.GetButton("Jump"))
+        {
+            SelectOnemore();
+        }
+        if (Input.GetButton("Cancel"))
+        {
+            Application.Quit();
+        }
+    }
 }
+

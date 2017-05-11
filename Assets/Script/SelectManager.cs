@@ -62,7 +62,7 @@ public class SelectManager : MonoBehaviour {
     {
         image.sprite = pants5;
         text.text = "君の浮気相手は非常に豪快な女性のようだ\n" +
-            "もしかしたら君の下着に見えるかもしれないが…残念ながら君の彼女はそうは思わないらしい。";
+            "もしかしたらこれを女性のパンツであると思わない人もいるかもしれないが…君の彼女の目はごまかせない。";
         status.text = "速さ:☆ 重さ:★★★★★ 操作性:☆ ";
         PlayerPrefs.SetInt(PANTS_KEY, 5);
         PlayerPrefs.Save();
